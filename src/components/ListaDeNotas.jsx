@@ -5,15 +5,15 @@ export class ListaDeNotas extends Component {
   render() {
     return (
       <ul>
-        {Array.of("Trabalho", "Trabalho", "Estudos").map((categorias) => {
-          return (
-            <li>
-              <div>{categorias}</div>{" "}
-              {/* chaves são utilizadas para usar variaveis */}
-              <CardNota />
-            </li>
-          );
-        })}
+        {Array.of("Trabalho", "Trabalho", "Estudos").map(
+          (categorias, index) => {
+            return (
+              <li key={index}>
+                <CardNota />
+              </li>
+            );
+          }
+        )}
       </ul>
     );
   }
